@@ -1,0 +1,147 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1527645857605" stop="1527645934657">
+  <name>test_login</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1527645857605" status="passed" stop="1527645880651">
+      <name>Test_Login.test_login[13488834010-159357-True-\u767b\u5f55\u6210\u529f-\u6210\u529f]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="33444-MainThread"/>
+        <label name="host" value="DESKTOP-284414J"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1527645880651" status="failed" stop="1527645901356">
+      <name>Test_Login.test_login[ 13488834010-159357-True-\u767b\u5f55\u6210\u529f-\u6210\u529f]</name>
+      <failure>
+        <message>AssertionError: assert False</message>
+        <stack-trace>self = &lt;test_login.Test_Login object at 0x04745B70&gt;, username = ' 13488834010'
+passwd = '159357', expectx = True, expect_toast = '登录成功', get_msg = '成功'
+
+    @pytest.mark.parametrize("username,passwd,expectx,expect_toast,get_msg",get_login_data())
+    def test_login(self, username,passwd,expectx,expect_toast,get_msg):
+        # 点击登陆/注册
+        self.page_obj.get_login_page().click_insert_login()
+        # 登陆操作
+        self.page_obj.get_login_page().login(username, passwd)
+    
+        if expectx:
+            try:
+                # 登陆成功toast消息
+                suc_msg = self.page_obj.get_login_page().find_toast(get_msg)
+                # 获取我的订单按钮是否存在 成功返回True 不成功返回False
+                suc_status = self.page_obj.get_login_page().get_suc_login_status()
+                # 断言成功/失败
+&gt;               assert suc_msg == expect_toast and  suc_status
+E               AssertionError: assert (False == '登录成功')
+
+Scripts\test_login.py:42: AssertionError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test_login.Test_Login object at 0x04745B70&gt;, username = ' 13488834010'
+passwd = '159357', expectx = True, expect_toast = '登录成功', get_msg = '成功'
+
+    @pytest.mark.parametrize("username,passwd,expectx,expect_toast,get_msg",get_login_data())
+    def test_login(self, username,passwd,expectx,expect_toast,get_msg):
+        # 点击登陆/注册
+        self.page_obj.get_login_page().click_insert_login()
+        # 登陆操作
+        self.page_obj.get_login_page().login(username, passwd)
+    
+        if expectx:
+            try:
+                # 登陆成功toast消息
+                suc_msg = self.page_obj.get_login_page().find_toast(get_msg)
+                # 获取我的订单按钮是否存在 成功返回True 不成功返回False
+                suc_status = self.page_obj.get_login_page().get_suc_login_status()
+                # 断言成功/失败
+                assert suc_msg == expect_toast and  suc_status
+                # 退出操作
+                # 点击个人中心设置
+                self.page_obj.get_setting_page().click_setting_btn()
+                # 点击退出登录按钮
+                self.page_obj.get_setting_page().click_logout_btn()
+            except:
+                # 点击登陆页面关闭按钮
+                self.page_obj.get_login_page().login_faile_x()
+&gt;               assert False
+E               assert False
+
+Scripts\test_login.py:51: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="33444-MainThread"/>
+        <label name="host" value="DESKTOP-284414J"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1527645901357" status="passed" stop="1527645909437">
+      <name>Test_Login.test_login[13488834010 -159357-True-\u767b\u5f55\u6210\u529f-\u6210\u529f]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="33444-MainThread"/>
+        <label name="host" value="DESKTOP-284414J"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1527645909437" status="passed" stop="1527645916888">
+      <name>Test_Login.test_login[13488834010-159357000-None-\u5bc6\u7801\u9519\u8bef!-\u9519\u8bef]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="33444-MainThread"/>
+        <label name="host" value="DESKTOP-284414J"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1527645916890" status="passed" stop="1527645922795">
+      <name>Test_Login.test_login[134888340101-159357000-None-\u8d26\u53f7\u4e0d\u5b58\u5728!-\u4e0d\u5b58\u5728]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="33444-MainThread"/>
+        <label name="host" value="DESKTOP-284414J"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1527645922796" status="passed" stop="1527645928693">
+      <name>Test_Login.test_login[1348883401-159357000-None-\u8d26\u53f7\u4e0d\u5b58\u5728!-\u4e0d\u5b58\u5728]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="33444-MainThread"/>
+        <label name="host" value="DESKTOP-284414J"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1527645928694" status="passed" stop="1527645934657">
+      <name>Test_Login.test_login[18888888888-1593570-None-\u8d26\u53f7\u4e0d\u5b58\u5728!-\u4e0d\u5b58\u5728]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="33444-MainThread"/>
+        <label name="host" value="DESKTOP-284414J"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

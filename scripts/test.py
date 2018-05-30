@@ -1,12 +1,17 @@
-import pytest,allure
+import pytest, allure
 
+class Test_00x:
 
-class Test_001:
-    @allure.step(title="测试步骤001")
-    @pytest.mark.parametrize("a",[1,2,3,4])
-    def test_abc(self,a):
-        assert a != 3
-    @allure.step(title="测试步骤002")
-    @pytest.mark.parametrize("a",[1,6,3,4])
-    def test_abcc(self,a):
-        assert a != 3
+    def test_abc(self):
+        with open("/Users/li/Documents/Worker/app_pro/Screen/111.png", "rb") as f:
+            allure.attach("截图", f.read(), allure.attach_type.PNG)
+        try:
+            1/0
+            assert True
+        except:
+            assert False
+        finally:
+            print(1111111)
+
+if __name__ == '__main__':
+    pytest.main("-s test.py")
